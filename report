@@ -1,0 +1,23 @@
+The purpose of this analysis is to develop a binary classifier that can predict if applicants of Alphabet Soup will be successful once they are funded. Using machine learning and neural network techniques, through the use of historical data of funded organizations to build a model that accurately is able to reveal promising applicants, optimizing the allocation of funds.
+
+Data Preprocessing
+
+Target Variable(s) for the Model: IS_SUCCESSFUL: This binary variable indicates whether the funding received by an organization was used effectively (1) or not (0).
+Feature Variable(s) for the Model: APPLICATION_TYPE, AFFILIATION, CLASSIFICATION, USE_CASE, ORGANIZATION, STATUS, INCOME_AMT, SPECIAL_CONSIDERATIONS, ASK_AMT
+Variables Removed from Input Data: EIN: Employer Identification Number, a unique identifier for organizations. NAME: Name of the organization.
+Compiling, Training, and Evaluating the ModelInput Layer: Used InputLayer to define the input shape based on the number of features.
+First Hidden Layer: 80 neurons, ReLU activation function. This layer was chosen to capture a broad range of features and interactions.
+Second Hidden Layer: 30 neurons, ReLU activation function. This layer further refines the features and reduces dimensionality.
+Output Layer: 1 neuron, Sigmoid activation function. This layer outputs a probability for binary classification.
+Model Performance:
+Accuracy: 72.61%
+Loss: 0.5724
+The target performance was set at 75% accuracy, and the model achieved an accuracy of 72.61%. While the target was not fully met, the model demonstrates reasonably good performance for an initial implementation.
+Steps Taken to Increase Model Performance:
+Data Preprocessing: Combined rare categorical variables into an "Other".
+Feature Scaling: Standardized the features for consistent input ranges for the neural network.
+Model Architecture: Experimented with different numbers of neurons and layers.
+Activation Functions: Used ReLU for hidden layers and Sigmoid for the output layer to facilitate binary classification.
+Summary: The deep learning model developed for Alphabet Soup achieved an accuracy of 72.61% in predicting the success of funded applications. Although this did not meet the 75% target accuracy, the model provides a solid foundation for further optimization. 
+Recommendations for Improvement:
+Hyperparameter Tuning: Implement techniques such as grid search or random search to find the optimal configuration of neurons, layers, and learning rate. Regularization Techniques: Apply regularization methods such as dropout or L2 regularization to prevent overfitting and improve generalization.
